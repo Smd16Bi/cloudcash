@@ -1,0 +1,26 @@
+.aside {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-right: 1px solid #F8F8F8;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 45px;
+  height: 30px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.title_logo {
+  color: #0F4264;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

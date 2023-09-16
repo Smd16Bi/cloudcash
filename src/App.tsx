@@ -1,7 +1,8 @@
 import React from 'react';
+import Loyaut from './loyaut/Loyaut';
 
 const App: React.FC = () => {
-  return <div>App</div>;
+  return <Loyaut />;
 };
 
 export default App;

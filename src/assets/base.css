@@ -1,0 +1,43 @@
+html,
+body {
+  background-color: #F0F0F0;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 20px;
+  font-family: var(--font-body);
+}
+
+.wrapper {
+  /* padding: 30px 40px; */
+  padding: 0 40px;
+  background-color: #fff;
+  border-radius: 60px;
+  margin: 60px auto;
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: minmax(auto, 255px) 1fr;
+  grid-template-rows: 100px auto auto;
+  grid-column-gap: 45px;
+  grid-template-areas:
+    "aside header"
+    "aside main"
+    "aside footer"
+  ;
+}
+
+header {
+  grid-area: header;
+}
+
+aside {
+  grid-area: aside;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
