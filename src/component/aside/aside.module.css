@@ -24,3 +24,63 @@
   font-weight: 700;
   line-height: normal;
 }
+
+.nav {
+  margin-top: 80px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list>*:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.item {}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  color: var(--color-secondary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  max-width: fit-content;
+  min-width: 150px;
+  padding: 5px 45px 5px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in;
+}
+
+.link svg {
+  margin-right: 18px;
+  width: 30px;
+  height: 30px;
+}
+
+.link svg path,
+.link svg rect {
+  transition: all 0.3s ease-in;
+}
+
+.link:hover,
+.active {
+  color: var(--color-active);
+  background-color: #F0F7FF;
+}
+
+.link:hover svg path,
+.active svg path {
+  stroke: var(--color-active);
+}
+
+.link:hover svg rect,
+.active svg rect {
+  fill: #F0F7FF;
+}
