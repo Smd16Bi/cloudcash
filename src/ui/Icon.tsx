@@ -9,6 +9,41 @@ const Icon: React.FC<PropsIcon> = React.memo(
     console.count('Render Icon');
     let icon;
     switch (type) {
+      case 'open':
+        icon = (
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none">
+            <g clipPath="url(#clip0_1236_850)">
+              <path
+                d="M9.5 10.5V12.5C9.5 12.7652 9.39464 13.0196 9.20711 13.2071C9.01957 13.3946 8.76522 13.5 8.5 13.5H1.5C1.23478 13.5 0.98043 13.3946 0.792893 13.2071C0.605357 13.0196 0.5 12.7652 0.5 12.5V1.5C0.5 1.23478 0.605357 0.98043 0.792893 0.792893C0.98043 0.605357 1.23478 0.5 1.5 0.5H8.5C8.76522 0.5 9.01957 0.605357 9.20711 0.792893C9.39464 0.98043 9.5 1.23478 9.5 1.5V3.5"
+                stroke="#C7C7C7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path d="M6.5 7H13.5" stroke="#C7C7C7" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M11.5 5L13.5 7L11.5 9" stroke="#C7C7C7" strokeLinecap="round" strokeLinejoin="round" />
+            </g>
+            <defs>
+              <clipPath id="clip0_1236_850">
+                <rect width="14" height="14" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        );
+        break;
+      case 'close':
+        icon = (
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none">
+            <path
+              d="M9.5 10V12.5C9.5 12.7652 9.39464 13.0196 9.20711 13.2071C9.01957 13.3946 8.76522 13.5 8.5 13.5H1.5C1.23478 13.5 0.98043 13.3946 0.792893 13.2071C0.605357 13.0196 0.5 12.7652 0.5 12.5V1.5C0.5 1.23478 0.605357 0.98043 0.792893 0.792893C0.98043 0.605357 1.23478 0.5 1.5 0.5H8.5C8.76522 0.5 9.01957 0.605357 9.20711 0.792893C9.39464 0.98043 9.5 1.23478 9.5 1.5V4"
+              stroke="#C7C7C7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path d="M12.5 7H4.5" stroke="#C7C7C7" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M6.5 5L4.5 7L6.5 9" stroke="#C7C7C7" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        );
+        break;
       case 'Overview':
         icon = (
           <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">

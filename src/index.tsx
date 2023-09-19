@@ -4,14 +4,11 @@ import './assets/reset.css';
 import './assets/root.css';
 import './assets/base.css';
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-  },
-]);
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-root.render(<RouterProvider router={router} />);
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+);

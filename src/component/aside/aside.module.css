@@ -1,19 +1,25 @@
 .aside {
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-right: 40px;
   border-right: 1px solid #F8F8F8;
+  max-width: fit-content;
+  transition: max-width 0.3s ease-in;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .logo a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  column-gap: 10px;
 }
 
 .logo img {
   width: 45px;
   height: 30px;
   object-fit: contain;
-  margin-right: 10px;
 }
 
 .title_logo {
@@ -27,6 +33,7 @@
 
 .nav {
   margin-top: 80px;
+  flex: 1;
 }
 
 .list {
@@ -41,9 +48,10 @@
 .item {}
 
 .link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: flex-start;
+  column-gap: 18px;
 
   color: var(--color-secondary);
   font-family: var(--font-body);
@@ -51,15 +59,13 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  max-width: fit-content;
-  min-width: 150px;
-  padding: 5px 45px 5px 10px;
+  min-width: fit-content;
+  padding: 5px 10px;
   border-radius: 4px;
   transition: all 0.3s ease-in;
 }
 
 .link svg {
-  margin-right: 18px;
   width: 30px;
   height: 30px;
 }
@@ -83,4 +89,43 @@
 .link:hover svg rect,
 .active svg rect {
   fill: #F0F7FF;
+}
+
+.btn {
+  margin: 50px 0 0 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 18px;
+
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--color-secondary);
+  font-family: var(--font-body);
+  padding: 5px 18px;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    display: none;
+  }
+}
+
+.myNodee-enter {
+  opacity: 0;
+}
+
+.myNode-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.myNode-exit {
+  opacity: 1;
+}
+
+.myNode-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
 }

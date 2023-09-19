@@ -33,13 +33,35 @@ const navigation = [
 
 const Aside: React.FC = () => {
   const location = useLocation();
+  const [close, setClose] = React.useState(true);
+  const [firstInit, setFirstInit] = React.useState(false);
+  const windowWidthRef = React.useRef(0);
+
+  const handlerClose = (): void => {
+    setClose(!close);
+  };
+
+  const checkWindowWidth = React.useCallback((): void => {
+    windowWidthRef.current = Number(window.innerWidth);
+    if (windowWidthRef.current <= 768) {
+      setClose(false);
+    }
+  }, []);
+
+  React.useEffect(() => {
+    if (!firstInit) {
+      checkWindowWidth();
+      window.addEventListener('resize', checkWindowWidth);
+      setFirstInit(!firstInit);
+    }
+  }, []);
 
   return (
     <aside className={style.aside}>
       <div className={style.logo}>
         <Link to="/" title="home">
           <img src={iconSvg} alt="logo" loading="lazy" />
-          <h2 className={style.title_logo}>cloudcash</h2>
+          {close && <h2 className={style.title_logo}>cloudcash</h2>}
         </Link>
       </div>
       <nav className={style.nav}>
@@ -51,13 +73,17 @@ const Aside: React.FC = () => {
                   to={el.path}
                   className={location.pathname === el.path ? `${style.link} ${style.active}` : `${style.link} `}>
                   <Icon type={el.name} />
-                  {el.name}
+                  {close && el.name}
                 </Link>
               </li>
             );
           })}
         </ul>
       </nav>
+      <button className={style.btn} onClick={handlerClose}>
+        <Icon type={close ? 'close' : 'open'} />
+        {close && <span>Less information</span>}
+      </button>
     </aside>
   );
 };

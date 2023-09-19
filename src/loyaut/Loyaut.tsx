@@ -3,7 +3,7 @@ import { Aside, Header } from '../component';
 type Props = {
   children?: React.ReactNode;
 };
-const Loyaut: React.FC = ({ children }: Props) => {
+const Loyaut: React.FC<Props> = ({ children }) => {
   return (
     <div className="wrapper">
       <Header />
