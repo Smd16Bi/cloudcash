@@ -1,4 +1,7 @@
 :root {
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Mooli', sans-serif;
+
+  --color-secondary: #C7C7C7;
+  --color-active: #197BBD;
 }
