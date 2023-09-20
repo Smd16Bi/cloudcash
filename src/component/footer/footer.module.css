@@ -1,0 +1,29 @@
+.footer {
+  padding-bottom: 30px;
+}
+
+.nav {}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 10px;
+}
+
+.item {}
+
+.link {
+  text-decoration: none;
+}
+
+.link svg {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.link svg:hover {
+  transform: scale(1.1);
+}
