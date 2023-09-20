@@ -110,22 +110,8 @@
   .btn {
     display: none;
   }
-}
 
-.myNodee-enter {
-  opacity: 0;
-}
-
-.myNode-enter-active {
-  opacity: 1;
-  transition: opacity 200ms;
-}
-
-.myNode-exit {
-  opacity: 1;
-}
-
-.myNode-exit-active {
-  opacity: 0;
-  transition: opacity 200ms;
+  .aside {
+    padding-right: 15px;
+  }
 }

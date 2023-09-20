@@ -16,9 +16,10 @@ body {
   margin: 60px auto;
   max-width: 80%;
   display: grid;
-  grid-template-columns: minmax(auto, 255px) 1fr;
-  grid-template-rows: 100px auto auto;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: minmax(110px, auto) auto auto;
   grid-column-gap: 45px;
+  grid-row-gap: 40px;
   grid-template-areas:
     "aside header"
     "aside main"
@@ -40,4 +41,12 @@ main {
 
 footer {
   grid-area: footer;
+}
+
+@media(max-width: 768px) {
+  .wrapper {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 15px;
+  }
 }
