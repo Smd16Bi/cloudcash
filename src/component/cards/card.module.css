@@ -1,0 +1,15 @@
+.cards {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.card_left {
+  flex: 1;
+  max-width: 350px;
+}
+
+.slider {}
+
+
+.card_right {}
