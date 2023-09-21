@@ -1,5 +1,5 @@
 import React from 'react';
-import { Aside, Header } from '../component';
+import { Aside, Header, Footer } from '../component';
 type Props = {
   children?: React.ReactNode;
 };
@@ -9,7 +9,7 @@ const Loyaut: React.FC<Props> = ({ children }) => {
       <Header />
       <Aside />
       <main>{children}</main>
-      <footer></footer>
+      <Footer />
     </div>
   );
 };
