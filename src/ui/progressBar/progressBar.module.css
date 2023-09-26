@@ -54,3 +54,12 @@
 .line {}
 
 .max_value {}
+
+@media(max-width: 768px) {
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 10px;
+  }
+}

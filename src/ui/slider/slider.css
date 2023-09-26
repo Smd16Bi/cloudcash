@@ -84,6 +84,7 @@
 .swiper-container {
   position: relative;
   padding: 0 20px;
+  max-width: 100%;
 }
 
 .swiper-button {
@@ -111,3 +112,5 @@
 .swiper-prev {
   left: -9px;
 }
+
+@media(max-width:768px) {}

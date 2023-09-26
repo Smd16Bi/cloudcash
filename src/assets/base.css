@@ -16,7 +16,7 @@ body {
   margin: 60px auto;
   max-width: 80%;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto minmax(200px, 1fr);
   grid-template-rows: minmax(110px, auto) 1fr auto;
   grid-column-gap: 45px;
   grid-row-gap: 40px;
