@@ -1,0 +1,65 @@
+.wrapper {
+  max-width: 310px;
+  margin: 30px auto 0 auto;
+}
+
+.bar {}
+
+.bar progress {
+  width: 100%;
+  height: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.bar progress::-webkit-progress-bar {
+  border-radius: 15px;
+  background-color: #F1F1F1;
+
+}
+
+.bar progress::-webkit-progress-value {
+  border-radius: 15px;
+  background-color: #197BBD;
+}
+
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.text {
+  color: var(--color-secondary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.money {
+  color: var(--color-heading);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.current_value {}
+
+.line {}
+
+.max_value {}
+
+@media(max-width: 768px) {
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 10px;
+  }
+}
